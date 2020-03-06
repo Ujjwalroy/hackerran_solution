@@ -1,0 +1,33 @@
+Question :-Insert a node at the head of a linked list
+
+
+    // Complete the insertNodeAtHead function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode list, int data) {
+       
+          SinglyLinkedListNode new_node= new SinglyLinkedListNode(data);
+          new_node.next=null;
+      
+        if(list==null)
+        {list=new_node;}
+        else{
+            SinglyLinkedListNode last;
+            last=list;
+            list=new_node;
+            new_node.next=last;
+        }
+        return list;
+
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
