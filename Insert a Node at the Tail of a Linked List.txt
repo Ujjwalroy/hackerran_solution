@@ -1,0 +1,29 @@
+Question:-Insert a Node at the Tail of a Linked List
+
+    // Complete the insertNodeAtTail function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
+         SinglyLinkedListNode new_node = new  SinglyLinkedListNode(data);
+         new_node.next=null;
+         if(head==null)
+         {head=new_node;}
+         else{
+              SinglyLinkedListNode list=head;
+              while(list.next!=null)
+              {list=list.next;}
+              list.next = new_node;
+             
+         }
+         return head;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);

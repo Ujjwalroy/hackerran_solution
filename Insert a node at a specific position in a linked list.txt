@@ -1,4 +1,4 @@
-qustion:-Insert a node at a specific position in a linked list
+question:-Insert a node at a specific position in a linked list
     
 
 // Complete the insertNodeAtPosition function below.
