@@ -1,0 +1,40 @@
+qustion:-Insert a node at a specific position in a linked list
+    
+
+// Complete the insertNodeAtPosition function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+
+        SinglyLinkedListNode new_node = new SinglyLinkedListNode(data);
+        new_node.next=null;
+        if(position==null)
+         { 
+             new_node.next=head;
+             head=new_node;
+         }
+         else
+         {
+            SinglyLinkedListNode list,last;
+            list=head;
+        while(--position>null)
+            {list=list.next;}
+            last=list.next;
+            list.next=new_node;
+            new_node.next=last;
+
+         }
+    
+
+        return head;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
