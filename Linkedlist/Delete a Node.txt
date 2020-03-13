@@ -1,0 +1,35 @@
+Question:-Delete a Node for spacifice position
+
+
+    // Complete the deleteNode function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+
+        SinglyLinkedListNode list=head;
+        if(position==0)
+        {
+        head=list.next;
+        return head;
+        }
+        
+        while(--position>0)
+        {
+            list=list.next;
+        }
+        
+        list.next=list.next.next;
+        return head;
+
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);

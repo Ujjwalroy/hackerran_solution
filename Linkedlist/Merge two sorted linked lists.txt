@@ -1,0 +1,50 @@
+Question:-Merge two sorted linked lists
+
+    // Complete the mergeLists function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        SinglyLinkedListNode head = new SinglyLinkedListNode(0);
+        SinglyLinkedListNode h1,h2,temp;
+        h1=head1;
+        h2=head2;
+        temp=head;
+        
+        
+
+        while(h1!=null || h2!=null)
+        {
+            if(h1==null){
+            temp.next=h2;
+            break;
+            }
+            if(h2==null){
+                temp.next=h1;
+                break;
+            }
+
+            if(h1.data<h2.data)
+            {
+                temp.next=h1;
+                h1=h1.next;
+            }else
+            {
+                temp.next=h2;
+                h2=h2.next;
+            }
+            temp=temp.next;
+        }     
+        
+    return head.next;
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
